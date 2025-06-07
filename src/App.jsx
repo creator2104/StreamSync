@@ -2,7 +2,7 @@ import { Provider } from 'react-redux'
 import './App.css'
 import Body from './Components/Body'
 import Head from './Components/Head'
-import Store from './Utils/Store'
+import store from './Utils/Store'
 // 🧱 Root component of your UI (holds your app layout and components)
 function App() {
  return(
@@ -14,7 +14,7 @@ function App() {
    //     -Buttonlist
    //     -Videocontainer
    //     -Videocard
-   <Provider store={Store}>
+   <Provider store={store}>
    <div>  
    <Head/>
    <Body/>

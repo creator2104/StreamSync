@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import Appslice from "./Appslice"
 
-const Store = configureStore({
+const store = configureStore({
   reducer:{
-    App: Appslice,
+    app: Appslice,
   }
 })
 
-export default Store 
+export default store 
 
 // after creating you store and including inside app check in extensions of browser (redux dev tools) that the store is working or not
