@@ -11,7 +11,7 @@ const categories = [
   "Live",
   "Trending",
   "Movies",
-  "Tech" 
+  "Tech"
 ];
 
 const Buttonlist = () => {

@@ -1,31 +1,42 @@
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
 const Sidebar = () => {
     const isMenuOpen = useSelector(store=>store.app.isMenuOpen)
     // Early Return pattern
     // if (!isMenuOpen) return null;
   return !isMenuOpen ? null : (
-    <div className='w-48 p-5 shadow-lg'>
-        <ul>
-            <li>Home</li>
-            <li>Shorts</li>
-            <li>Videos</li>
-            <li>Live</li>
-        </ul>
-        <h1 className='font-bold pt-5'>Subscriptions</h1>
-        <ul>
-            <li>Music</li>
-            <li>Sports</li>
-            <li>Movies</li>
-            <li>Gaming</li>
-        </ul>
-        <h1 className='font-bold pt-5'>Watch Later</h1>
-        <ul>
-            <li>Music</li>
-            <li>Sports</li>
-            <li>Movies</li>
-            <li>Gaming</li>
-        </ul>
+    <div className='w-64 p-5 shadow-lg sticky top-0 bg-white'>
+          <ul className="space-y-1">
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer"><Link to="/">Home</Link></li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Shorts</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Videos</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Live</li>
+      </ul>
+
+      <h1 className="font-bold pt-5">Subscriptions</h1>
+      <ul className="space-y-1">
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Music</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Sports</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Movies</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Gaming</li>
+      </ul>
+
+      <h1 className="font-bold pt-5">Watch Later</h1>
+      <ul className="space-y-1">
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Movies</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Namaste</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Devtech</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Javascript</li>
+      </ul>
+
+      <h1 className="font-bold pt-5">Liked Videos</h1>
+      <ul className="space-y-1">
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Akshay</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Shorts</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">DSA</li>
+        <li className="hover:bg-gray-100 rounded px-2 py-1 cursor-pointer">Python</li>
+      </ul>
     </div>
   )
 }

@@ -19,7 +19,7 @@ const Head = () => {
           src={Hamburger_svg}
           alt="menu"
           onClick={()=>toggleMenuHandler()}
-          className="ml-2 h-12 hover:bg-gray-200 hover:rounded-4xl p-1 my-1 mt-2 cursor-pointer"
+          className="ml-2 h-12 hover:bg-gray-200 hover:rounded-4xl my-1 mt-2 cursor-pointer"
         />
         <a href="">
         <img
