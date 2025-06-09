@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../Utils/Appslice";
 import { useSearchParams } from "react-router-dom";
 
 const Watchpage = () => {
+  // useparams only work on /Id not ?v=...... so we have to use useSearchParams
   const [searchParams] = useSearchParams();
   console.log(searchParams.get("v"));
+  // there v is the key to search for perticular video in url
   const disPatch = useDispatch();
+  // we have used useeffect bcz we wanna close the hamburger for once
   useEffect(() => {
     disPatch(closeMenu());
   }, []);

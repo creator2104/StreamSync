@@ -21,13 +21,11 @@ const Head = () => {
           onClick={()=>toggleMenuHandler()}
           className="ml-2 h-12 hover:bg-gray-200 hover:rounded-4xl my-1 mt-2 cursor-pointer"
         />
-        <a href="">
         <img
           src={yt_logo}
           alt="youtube-logo"
           className="h-18 mt-1 cursor-pointer"
         />
-        </a>
       </div>
       <div className="p-2 mx-50 w-7/12">
         <input

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 const Videocontainer = () => {
   // we called api here bcz we need data of videos here 
   const [Videos,setVideos] = useState([])
+  // video have no data here after re-rendering setvideos give all json data to video  
   useEffect(()=>{
     getvideos()
   },[])
@@ -20,6 +21,7 @@ const Videocontainer = () => {
       {Videos.map((video)=>(
         <Link to={"/watch?v="+video.id}><Videocard key={video.id} info={video}/></Link>))}
     </div>
+    // we have written {"/watch?v="+video.id} in link to make the card clickable and redirect to the watch page and get the information of id of that perticular card 
   )
 }
 
