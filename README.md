@@ -54,3 +54,4 @@ Sidebar toggles
 Notifications
 API data caching
 
+# toastify - for message like item added to the cart 
