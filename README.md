@@ -55,3 +55,31 @@ Notifications
 API data caching
 
 # toastify - for message like item added to the cart 
+
+# Debouncing
+- Debouncing is a technique used to delay the execution of a function until after a certain amount of time has passed since the last time it was invoked.
+- When a user types in a search bar, we only want to call the API after they stop typing for a short while (e.g., 300ms), instead of calling it on every keystroke.
+
+🎯 Why Use Debouncing in a Search Bar?
+In a search bar, users might type very quickly. Without debouncing:
+An API call is made on every keystroke
+This causes performance issues
+It can overload the server
+Leads to wasted network requests and jumpy UI
+
+- With debouncing:
+API is called only once after the user stops typing for a fixed time (e.g., 300ms)
+This improves performance, reduces server load, and enhances user experience
+
+- 🛠 Where Is It Used?
+Search bars
+Form validation
+Live filtering
+Resize and scroll events
+Autocomplete suggestions
+
+- debouncing with 200ms
+- if the difference between two key strokes is < 200ms - Decline the API call
+- for > 200ms  make an API call
+
+- to get the google search API write search on google "Google search suggestion API" and get it from stack overflow and pass your query on URL
