@@ -83,3 +83,28 @@ Autocomplete suggestions
 - for > 200ms  make an API call
 
 - to get the google search API write search on google "Google search suggestion API" and get it from stack overflow and pass your query on URL
+
+# Live chat >>>>>>> Infinite scroll >>>>>>> pagination 
+
+# challenges of live chat
+- Get data live 
+  - websockets to get live data
+  - Definition: A full-duplex, persistent connection between client and server, allowing real-time two-way communication.
+  - Low latency (server can push data instantly)
+  - Supports real-time apps (chat, live scores, multiplayer games, etc.)
+    - webscokets is a two way connection establish , its kind of handshake between a server and a UI 
+    - so from handshake you can quickly send the data from either side (means easily send the data from UI to backend and viseversa)
+  - zerodha , angle one needs live data of stock market (trading apps)  
+  - WHATSAPP is also using live data for chat bcz the order of chat can be changed
+  - all live chating apps using websockets 
+
+  - Long polling (API polling)
+  - Definition: Client sends HTTP requests to the server at regular intervals to check for new data.
+  - Long Polling: Client sends a request, server holds it open until new data is available or times out, then responds. After receiving, the client immediately sends another request.
+  - High latency (response is only as fast as the polling interval)
+  - Works over HTTP (no special protocol)
+    - server sends data from UI (onedirectional way) and after an interval 
+    - it checks after few time for new data onto server , if server gets the new data it will update the UI
+  - example : gmail doesnt need live data if uesr will receive its email after 10s it is fine 
+  - cricket apps using live data(jiocinema,crickbuzz,crex)
+- Update the UI

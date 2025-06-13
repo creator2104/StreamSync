@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../Utils/Appslice";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
+import Livechat from "./Livechat.jsX";
 
 const Watchpage = () => {
   // useparams only work on /Id not ?v=...... so we have to use useSearchParams
@@ -15,8 +16,9 @@ const Watchpage = () => {
     disPatch(closeMenu());
   }, []);
   return (
-    <div className="flex-col">
-    <div className="px-5">
+    <div className="flex-col w-full">
+    <div className="px-5 flex">
+      <div>
       <iframe
         width="1000"
         height="500"
@@ -27,6 +29,10 @@ const Watchpage = () => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
+      </div>
+      <div className="w-full">
+        <Livechat/>
+      </div>
     </div>
     <CommentsContainer/>
     </div>
