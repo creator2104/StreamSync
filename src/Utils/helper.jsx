@@ -205,5 +205,26 @@ export function generateRandomText(numParagraphs, numSentencesPerParagraph) {
   return paragraphs.join('\n\n');
 }
 
+export function nthPrime(n) {
+  n = Math.floor(n); // Ensure it's an integer
+  if (n < 1) return null;
+  let count = 0;
+  let num = 2;
+
+  while (true) {
+    let isPrime = true;
+    for (let i = 2; i * i <= num; i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      count++;
+      if (count === n) return num;
+    }
+    num++;
+  }
+}
 
 // api data for generating random data
