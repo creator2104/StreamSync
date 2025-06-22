@@ -11,7 +11,7 @@ const Demo = () => {
   // this nthprime no calculation is a heavy operation
   // const cachedvalue = useMemo(calculatevalue,dependecies)
   const prime = useMemo(() => nthPrime(text),[text])
-  // memorize it and change it only when my text changes then calcukate the prime no otherwise dont
+  // memorize it and change it only when my text changes then calculate the prime no otherwise dont
   // console.log("Rendering");
   // if i am toggling to the button of theme at that time the unnecessary state of text is being updated or prime no is being updated 
   // every time i am changing my theme my prime no is calculated which is not required
@@ -51,4 +51,4 @@ export default Demo;
 
 // useCallback - useCallback is a react hook that lets you cache a function definition between re-renders  
 // const cachefn = useCallback(fn,dependecies)
-//  the difference is useMemo caches the value and useCallback caches the function
+// the difference is useMemo caches the value and useCallback caches the function
