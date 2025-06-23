@@ -10,10 +10,10 @@ const Demo = () => {
   // useMemo is a react hook that lets you cache the results of a calculation between re-renders
   // this nthprime no calculation is a heavy operation
   // const cachedvalue = useMemo(calculatevalue,dependecies)
-  const prime = useMemo(() => nthPrime(text),[text])
+  const prime = useMemo(() => nthPrime(text),[text]) 
   // memorize it and change it only when my text changes then calculate the prime no otherwise dont
   // console.log("Rendering");
-  // if i am toggling to the button of theme at that time the unnecessary state of text is being updated or prime no is being updated 
+  // if i am toggling to the button of theme at that time the unnecessary state of text is being updated or prime not being updated 
   // every time i am changing my theme my prime no is calculated which is not required
   // whenever a state variable updates react will re-render its whole component
 
@@ -42,7 +42,7 @@ const Demo = () => {
       <div>
         <h1>nth prime: {prime}</h1>
       </div>
-    </div>
+    </div> 
   );
 };
 
