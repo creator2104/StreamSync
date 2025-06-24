@@ -8,6 +8,7 @@ import Maincontainer from "./Components/Maincontainer";
 import Watchpage from "./Components/Watchpage";
 import Demo from "./Components/Demo";
 import Demo2 from "./Components/Demo2";
+import AuthContext from "../Contexts/AuthContext";
 // 🧱 Root component of your UI (holds your app layout and components)
 
 const appRouter = createBrowserRouter([
@@ -22,6 +23,10 @@ const appRouter = createBrowserRouter([
       {
         path: "watch",
         element: <Watchpage />,
+      },
+      {
+        path: "auth",
+        element: <AuthContext />,
       },
       {
         path: "demo",
